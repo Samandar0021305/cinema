@@ -1994,6 +1994,7 @@ function cinema(movies = []){
     
     h2Element.textContent = item.title;
     imgElement.setAttribute("src",item.imageUrl);
+    textElement.textContent = item.description;
     divElement.appendChild(imgElement);
     divElement.appendChild(h2Element);
     divElement.appendChild(textElement);

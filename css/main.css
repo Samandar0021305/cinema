@@ -21,3 +21,11 @@
     width: 80%;
     height: 100px;
 }
+
+.navbar{
+    height: 60px;
+    background-color: rgb(165, 87, 42);
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
