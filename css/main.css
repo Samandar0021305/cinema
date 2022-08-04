@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.wrapper div{
+    width: 30%;
+    min-height: 200px;
+}
+.wrapper img{
+    width: 80%;
+    height: 100px;
+}
