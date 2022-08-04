@@ -1985,13 +1985,15 @@ const movies = [
 
 function cinema(movies = []){
   let wrapper = document.querySelector(".wrapper")
+  let searchInput = document.getElementById("searchInput");
+  let btn = document.getElementById("btn")
   for(let item of movies){
     let divElement = document.createElement("div");
     let imgElement = document.createElement('img');
     let h2Element = document.createElement("h2");
     let textElement = document.createElement("p");
 
-    
+   
     h2Element.textContent = item.title;
     imgElement.setAttribute("src",item.imageUrl);
     textElement.textContent = item.description;
@@ -1999,6 +2001,24 @@ function cinema(movies = []){
     divElement.appendChild(h2Element);
     divElement.appendChild(textElement);
     wrapper.appendChild(divElement)
+    
+    btn.addEventListener("click",()=>{
+      let value = searchInput.value;
+      if(value == item.title){
+        let newDivElement = document.createElement("div");
+        let imgElement1 = document.createElement('img');
+        let h2Element1 = document.createElement("h2");
+        let textElement1 = document.createElement("p");
+
+
+        h2Element1.textContent = item.title;
+        imgElement1.setAttribute("src",item.imageUrl);
+        textElement1.textContent = item.description;
+        newDivElement.appendChild(imgElement1);
+        newDivElement.appendChild(h2Element1);
+        newDivElement.appendChild(textElement1);
+      }
+    })
     
   }
 }
